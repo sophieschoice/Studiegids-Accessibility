@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="nl_NL"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Toegankelijke CSS | Studiegids A11Y</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Toegankelijke CSS" />
+<meta name="author" content="Sophie Ragas" />
+<meta property="og:locale" content="nl_NL" />
+<meta name="description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<meta property="og:description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<link rel="canonical" href="http://localhost:4000/artikelen/website/css.html" />
+<meta property="og:url" content="http://localhost:4000/artikelen/website/css.html" />
+<meta property="og:site_name" content="Studiegids A11Y" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Toegankelijke CSS" />
+<meta name="twitter:site" content="@sophieschoice" />
+<meta name="twitter:creator" content="@Sophie Ragas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Toegankelijke CSS","url":"http://localhost:4000/artikelen/website/css.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="<Project title>">Studiegids A11Y</a>
+          </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+  <button type="button" class="usa-nav__close">
+    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+  </button>
+  <ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Home</span>
+      </a>
+    </li>
+        <li class="usa-nav__primary-item">
+      <a href="artikelen.html" class="usa-nav-link">
+        <span>Artikelen</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Links</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="overons.html" class="usa-nav-link">
+        <span>Over ons</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="contact.html" class="usa-nav-link">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+  <section aria-label="Search component">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search"/>
+      <button class="usa-button" type="submit">
+        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+      </button>
+    </form>
+  </section>
+</nav>
+  </div>
+</header><main id="main-content">
+      <div class="grid-container usa-layout usa-intro">
+ <h1>Toegankelijke CSS</h1>
+<p><span lang="en">Cascading Style Sheets</span>, of CSS, maken het mogelijk om de weergave en stijl van HTML-elementen te wijzigen. CSS wordt “trapsgewijs” (het Nederlandse woord voor cascading) genoemd omdat er een hiërarchie of rangorde is voor hoe stijlen worden toegepast:</p>
+
+<ul>
+  <li>de standaard stijlen van de browser</li>
+  <li>een apart .css bestand</li>
+  <li>CSS in de HTML-pagina zelf (meestal te vinden in de <code>&lt;head&gt;</code>, sectie van een pagina)</li>
+  <li>CSS in de HTML-pagina, direct toegepast op een HTML element).</li>
+</ul>
+
+<div class="opmerking">
+	<p>❗️<b>Belangrijk</b>: Om de toegankelijkheid te verbeteren, kunnen eindgebruikers de standaardstijlen in de browser wijzigen en kunnen ze aangepaste stijlen definiëren die alle andere stijlen in de "cascade" overschrijven. Pagina's moeten aanpasbaar en flexibel zijn voor stijlaanpassingen van eindgebruikers.</p>
+	<p>Waarom zou een eindgebruiker zijn eigen stijlen definiëren? Een gebruiker met slecht zicht kan een veel grotere tekstgrootte definiëren. Een gebruiker met een kleurentekort of slechtziendheid kan paginakleuren overschrijven om bepaalde kleuren of een hoog contrast af te dwingen. Een gebruiker met cognitieve beperkingen of leermoeilijkheden kan de positionering wijzigen of afbeeldingen uitschakelen om een meer eenvoudige presentatie te verzekeren. Een gebruiker met dyslexie zou lettertypes en tekstafstanden kunnen veranderen voor een betere leesbaarheid.</p>
+</div>
+
+<h2 id="problemen">Problemen</h2>
+<p>Omdat CSS voornamelijk over visuele presentatie gaat, heeft de meeste CSS geen invloed op wat een screenreader zal lezen. Maar toch kan CSS voor problemen zorgen:</p>
+
+<ul>
+  <li>Sommige stijlen, zoals <code>display:none</code> en <code>visibility:hidden</code> zorgen ervoor dat inhoud wordt genegeerd door screenreaders. Afhankelijk van het soort inhoud kan dit een inbreuk zijn op een of meerdere succescriteria.</li>
+  <li>Pseudo-content gedefinieerd met <code>::before</code> en <code>::after</code> wordt gelezen door schermlezers. Als er afbeeldingen of pictogrammen of icon fonts worden gebruikt, moet er een tekstueel alternatief zijn of dienen ze gemarkeerd te worden als decoratief. Anders is dit een inbreuk op succescriterium <a href="https://www.w3.org/Translations/WCAG21-nl/#niet-tekstuele-content">1.1.1 Niet-tekstuele content</a>.</li>
+  <li>CSS wordt gebruikt om visuele informatie, betekenis en relaties weer te geven. Dit is een inbreuk op <a href="https://www.w3.org/Translations/WCAG21-nl/#info-en-relaties">1.3.1 Info en relaties</a></li>
+  <li>Eindgebruikers moeten in staat zijn de stijl van de website te overschrijven met zijn eigen stylesheet. Dit is anders een inbreuk op <a href="https://www.w3.org/Translations/WCAG21-nl/#herschalen-van-tekst">1.4.4 Herschalen van tekst</a>, <a href="https://www.w3.org/Translations/WCAG21-nl/#reflow">1.4.10 Reflow</a> of <a href="https://www.w3.org/Translations/WCAG21-nl/#tekstafstand">1.4.12 Tekstafstand</a>.</li>
+  <li>De CSS geeft visueel de inhoud een andere volgorde dan de inhoud in de code heeft. Dit kan een inbreuk zijn op <a href="https://www.w3.org/Translations/WCAG21-nl/#betekenisvolle-volgorde">1.3.2 Betekenisvolle volgorde</a> of <a href="https://www.w3.org/Translations/WCAG21-nl/#focus-volgorde">2.4.3 Focus volgorde</a></li>
+</ul>
+
+<p>Deze valkuilen worden op deze pagina verder uitgelegd.</p>
+
+<h2 id="inhoud-scheiden-van-presentatie">Inhoud scheiden van presentatie</h2>
+
+<p>Een primair voordeel van CSS is dat auteurs inhoud kunnen scheiden van de presentatie. Inhoud betekent de tekst, koppen, lijsten, regio’s, afbeeldingen en andere elementen gedefinieerd in HTML markup. Presentatie is de manier waarop inhoud wordt weergegeven, zoals gedefinieerd in het CSS-bestand.</p>
+
+<p>Dus door ervoor te zorgen dat de inhoud in HTML staat en de presentatie in CSS, zouden, als iemand CSS uitschakelt of overschrijft, de inhoud en semantiek nog steeds volledig toegankelijk moeten zijn.</p>
+
+<h2 id="de-visuele-opmaak-regelen">De visuele opmaak regelen</h2>
+
+<p>In CSS bieden zaken als <code>float</code>, <code>display</code> (vooral met <code>display: grid</code>), enz. grote controle over de positionering van elementen binnen een pagina, ongeacht de volgorde van die elementen in de HTML-code. De volgorde van de onderliggende broncode bepaalt de leesvolgorde van de screenreader en de volgorde van de navigatie op het toetsenbord. Dit moet overeenstemmen met de visuele lay-out. Beide moeten logisch en intuïtief zijn, en moeten over het algemeen op één lijn liggen.</p>
+
+<div class="opmerking">
+	<p>💡 <b>Opmerking</b>: WCAG vereist dat de leesvolgorde en de navigatievolgorde van elementen overeenkomen met de visuele betekenis en volgorde. Iemand die de inhoud van een pagina verkent met behulp van een screenreader of toetsenbord, moet de inhoud doorgaans in dezelfde volgorde tegenkomen als iemand die de inhoud visueel leest (doorgaans van links naar rechts, van boven naar beneden).</p>
+</div>
+
+<h2 id="inhoud-verbergen-met-css">Inhoud verbergen met CSS</h2>
+
+<p>De regel is dat in bijna alle gevallen content die visueel op een pagina wordt gepresenteerd, toegankelijk moet zijn voor gebruikers van screenreaders. Andersom geldt ook: inhoud die visueel verborgen is met CSS zou niet toegankelijk moeten zijn voor gebruikers van screenreaders.</p>
+
+<p>Echter wordt vaak <code>display:none</code> en <code>visibility:hidden</code> gebruikt om zaken visueel te verbergen. Als het ook voor screenreaders verborgen moet zijn, is dat niet erg. Maar als de informatie nog wel beschikbaar moet zijn voor screenreaders, worden deze zaken beter niet in de CSS gebruikt.</p>
+
+<p>In het geval dat iets visueel verborgen mag worden, maar niet verborgen voor screenreaders, gebruik je beter de CSS cliptechniek:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.sr-only</span>
+<span class="p">{</span><span class="nl">clip</span><span class="p">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">);</span>
+<span class="nl">clip-path</span><span class="p">:</span> <span class="nb">inset</span><span class="p">(</span><span class="m">50%</span><span class="p">);</span>
+<span class="py">hoogte</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<span class="py">breedte</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<span class="py">marge</span><span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+<span class="nl">overflow</span><span class="p">:</span> <span class="n">verborgen</span><span class="p">;</span>
+<span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;}</span></code></pre></figure>
+
+<p>Deze vrij moderne techniek verbergt of knipt inhoud die niet in een zichtbaar gebied van 1 pixel past. Net als buiten-het-scherm inhoud, zal het visueel verborgen zijn, maar nog steeds leesbaar door moderne screenreaders.</p>
+
+<h2 id="inhoud-en-betekenis-weergeven-met-css">Inhoud en betekenis weergeven met CSS</h2>
+
+<p>In tegenstelling tot het verbergen van inhoud met CSS, wordt inhoud of betekenis soms uitsluitend gepresenteerd met CSS. Dit kan zijn om het volgende te doen:</p>
+
+<ul>
+  <li>achtergrondafbeeldingen te definiëren die inhoud presenteren of betekenis hebben</li>
+  <li>de lay-out of visuele presentatie is op een manier die de betekenis beïnvloedt</li>
+  <li>er wordt op enkel kleur geleund om betekenis over te brengen</li>
+</ul>
+
+<p>Deze technieken moeten over het algemeen vermeden worden. Echter, in situaties waar CSS wordt gebruikt om informatie, inhoud of betekenis te presenteren die anders niet toegankelijk is, moet een toegankelijk alternatief worden geboden.</p>
+
+<p>CSS achtergrondafbeeldingen kunnen bijvoorbeeld niet direct van alternatieve tekst worden voorzien (hoewel een CSS alt eigenschap momenteel in ontwikkeling is). Als een afbeelding inhoud overbrengt, moet deze optimaal in de inhoud worden geplaatst door gebruik te maken van het img element met een geschikte alt attribuut waarde. Als dit niet mogelijk is, kan verborgen tekst of tekst buiten het scherm (of misschien ARIA) worden gebruikt om de inhoud van de afbeelding over te brengen aan gebruikers die deze niet kunnen zien.</p>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="conclusie">Conclusie</h2>
+<p>Pseudo-content en het verbergen van inhoud zijn enkele zaken waar CSS op het gebied van toegankelijkheid problemen kan veroorzaken. Gebruik daarom altijd native HTML markup om de nodige semantische inhoud en betekenis te geven en gebruik dan CSS om de standaard stijlen te verbeteren en te veranderen.</p>
+
+<div class="opmerking">
+<p>👉️ Opmerkingen? Vragen? Iets onduidelijk of onvolledig? Of vond je het helemaal geweldig? Stuur me een <a href="mailto:sophie@sophieschoice.net">mailtje met je feedback</a>!</p>
+</div>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>Deze pagina is grotendeels gebaseerd op een vertaling van <a href="https://webaim.org/techniques/css/">WebAim’s pagina over toegankelijke CSS</a>.</p>
+
+<h2 id="bronnen">Bronnen</h2>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+
+    </div>
+   </main><footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          <ul class="grid-row grid-gap">
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-lg:grid-col-4">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+              </div>
+            </div>
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//statistics.sophieschoice.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <script src="assets/js/uswds.min.js"></script>
+	</body>
+</html>

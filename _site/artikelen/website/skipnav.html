@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="nl_NL"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Skiplinks en andere manieren om blokken content over te slaan | Studiegids A11Y</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Skiplinks en andere manieren om blokken content over te slaan" />
+<meta name="author" content="Sophie Ragas" />
+<meta property="og:locale" content="nl_NL" />
+<meta name="description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<meta property="og:description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<link rel="canonical" href="http://localhost:4000/artikelen/website/skipnav.html" />
+<meta property="og:url" content="http://localhost:4000/artikelen/website/skipnav.html" />
+<meta property="og:site_name" content="Studiegids A11Y" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Skiplinks en andere manieren om blokken content over te slaan" />
+<meta name="twitter:site" content="@sophieschoice" />
+<meta name="twitter:creator" content="@Sophie Ragas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Skiplinks en andere manieren om blokken content over te slaan","url":"http://localhost:4000/artikelen/website/skipnav.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="<Project title>">Studiegids A11Y</a>
+          </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+  <button type="button" class="usa-nav__close">
+    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+  </button>
+  <ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Home</span>
+      </a>
+    </li>
+        <li class="usa-nav__primary-item">
+      <a href="artikelen.html" class="usa-nav-link">
+        <span>Artikelen</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Links</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="overons.html" class="usa-nav-link">
+        <span>Over ons</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="contact.html" class="usa-nav-link">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+  <section aria-label="Search component">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search"/>
+      <button class="usa-button" type="submit">
+        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+      </button>
+    </form>
+  </section>
+</nav>
+  </div>
+</header><main id="main-content">
+      <div class="grid-container usa-layout usa-intro">
+ <h1>Skiplinks en andere manieren om blokken content over te slaan</h1>
+<p>Op de meeste pagina’s moeten gebruikers met een toetsenbord of screenreader door een lange lijst met navigatiekoppelingen en andere elementen navigeren voordat ze ooit bij de hoofdinhoud komen. Dit kan bijzonder moeilijk zijn voor gebruikers met bepaalde vormen van motorische beperkingen. Denk aan gebruikers zonder of met een beperkte armbeweging die op een webpagina navigeren door met hun hoofd op een schakelaar te tikken of die een stok in hun mond gebruiken om toetsen van het toetsenbord in te drukken. Als gebruikers een bepaalde handeling meerdere malen moeten uitvoeren voordat ze bij de hoofdinhoud komen, vormt dit een toegankelijkheidsbarrière.</p>
+
+<p>Zienden die hun muis gebruiken, hebben natuurlijk geen moeite met dergelijke webpagina’s. Zij kunnen vrijwel onmiddellijk de pagina scannen en zien waar de hoofdinhoud zich bevindt. Skiplinks zijn vooral nuttig om gebruikers van schermlezers en toetsenborden dezelfde mogelijkheid te geven om direct naar de hoofdinhoud te navigeren.</p>
+
+<h2 id="creëren-van-skiplinks">Creëren van skiplinks</h2>
+
+<p>Het idee is eenvoudig: voorzie een link bovenaan de pagina die, wanneer geactiveerd, de gebruiker naar het begin van de hoofdinhoud brengt.</p>
+
+<h2 id="zichtbare-links">Zichtbare links</h2>
+
+<p>De gemakkelijkste methode om een navigatie-link over te slaan is deze bovenaan of dichtbij de pagina te plaatsen in gewone tekst. Het belangrijkste is ervoor te zorgen dat de link een van de eerste items is die schermlezers horen en waarnaar toetsenbordgebruikers navigeren met het toetsenbord (meestal door op de Tab-toets te drukken). Anders beseffen gebruikers misschien niet dat er een link is om navigatie over te slaan en verspillen ze tijd met het navigeren door irrelevante links. De link moet ook duidelijk zijn om nuttig te zijn.</p>
+
+<p>Voorbeeld</p>
+
+<p>De link is het eerste item op de pagina. Het anker of doel voor de link (waar de link naartoe springt) is de hoofdinhoudsregio.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body&gt;
+&lt;a href="#maincontent"&gt;Skip to main content&lt;/a&gt;
+...
+&lt;main id="maincontent"&gt;
+&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;This is the first paragraph&lt;/p&gt;
+</code></pre></div></div>
+
+<p>Het doel wordt geïdentificeerd door de waarde in het <code class="language-plaintext highlighter-rouge">id</code>-attribuut die overeenkomt met de <code class="language-plaintext highlighter-rouge">href</code>-waarde (minus de “#”) van de skip link. Als de overgeslagen link wordt geactiveerd, gaat de toetsenbordfocus naar het <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code>-element. Navigatie en lezen vinden plaats vanaf deze locatie op de pagina.</p>
+
+<h2 id="tijdelijk-verborgen-snelkoppelingen">Tijdelijk verborgen snelkoppelingen</h2>
+
+<p>Veel ontwerpers maken zich zorgen over de esthetische impact van zichtbare skiplinks. Ze kunnen denken dat deze links onaantrekkelijk of verwarrend zijn voor gebruikers die ze niet nodig hebben, dus kunnen ze besluiten ze onzichtbaar te maken. Een zeer kleine of verborgen link is niet in het voordeel van het publiek dat het meest behoefte heeft aan skiplinks - ziende toetsenbordgebruikers. Terwijl screenreaders veel mechanismen hebben om over de pagina te springen (bv. koppen en regio’s/landmarkeringen), hebben andere toetsenbordgebruikers dat niet.</p>
+
+<p>Om tegemoet te komen aan de bezorgdheid dat een zichtbare skiplink opdringerig kan zijn, maar toch een overslaan-link te maken die nuttig is voor ziende toetsenbordgebruikers, bevelen wij aan een link te maken die verborgen is tot de gebruiker er met een toetsenbord naartoe navigeert.</p>
+
+<p>Om bruikbaar te zijn voor alle toetsenbordgebruikers, in het bijzonder gebruikers met een visuele handicap, moet de link</p>
+
+<ul>
+  <li>standaard verborgen zijn</li>
+  <li>toegankelijk zijn voor navigatie met het toetsenbord</li>
+  <li>prominent zichtbaar worden wanneer erop wordt gefocust</li>
+  <li>op de juiste manier de aandacht vestigen op de hoofdinhoud wanneer deze geactiveerd wordt</li>
+</ul>
+
+<p>Waarschijnlijk de meest toegankelijke methode voor het visueel verbergen van een overgeslagen link is deze buiten het scherm te verbergen met CSS, en er dan voor te zorgen dat hij op het scherm wordt geplaatst wanneer hij toetsenbordfocus krijgt. Omdat de link nog steeds deel uitmaakt van de toegankelijke inhoud op de pagina, kunnen gebruikers van het toetsenbord en schermlezers er doorheen navigeren, en wordt de link zichtbaar wanneer hij wordt geopend.</p>
+
+<p>Sommige technieken, zoals het verbergen van de koppeling overslaan met CSS display:none of het hidden-attribuut, verwijderen de koppeling uit de toetsenbordnavigatie, waardoor deze voor alle gebruikers ontoegankelijk wordt. De link dezelfde kleur geven als de achtergrond of volledig transparant maken, de link een grootte van 0 pixels geven of op een transparante afbeelding van één pixel plaatsen, kan ook toegankelijkheidsproblemen opleveren.</p>
+
+<p>Belangrijk: lees het artikel over onzichtbare inhoud voor gebruikers van een schermlezer voor meer informatie over het gebruik van CSS om links die overgeslagen worden buiten het scherm te verbergen.</p>
+
+<p>Een mogelijk probleem met deze aanpak is dat als de gebruiker heel snel navigeert met de Tab-toets, de link slechts een fractie van een seconde zichtbaar is op de pagina en over het hoofd kan worden gezien. Dit kan gedeeltelijk worden verholpen door ervoor te zorgen dat de link “skip”, wanneer zichtbaar, visueel duidelijk opvalt bovenaan de pagina. Bovendien zou men scripting of CSS-overgangen kunnen gebruiken om de link te laten animeren, zodat hij langer zichtbaar blijft op het scherm.
+Opmerking</p>
+
+<p>Navigeer door de links aan het begin van deze pagina met de Tab-toets om een voorbeeld te zien van een verborgen skip-link die zichtbaar wordt bij toetsenbordfocus met behulp van CSS-overgangen om hem visueel opvallend te maken en minstens een moment op het scherm zichtbaar te houden.</p>
+
+<h2 id="meerdere-links-naar-hoofdinhoud-zijn-meestal-niet-nodig">Meerdere links naar hoofdinhoud zijn meestal niet nodig</h2>
+
+<p>Wat als een pagina meerdere secties of meerdere niveaus van navigatielinks heeft? Moeten ontwikkelaars dan voor elk van deze secties een link maken om de navigatie over te slaan of om elk navigatieniveau over te slaan?</p>
+
+<p>In de meeste gevallen is een enkele link voldoende. Voor pagina’s met zeer weinig navigeerbare elementen die aan de hoofdinhoud voorafgaan, is een link om over te slaan misschien helemaal niet nodig. Anderzijds kan het op een zeer complexe pagina met verschillende herhaalde elementen nodig zijn extra links over te slaan. Onthoud dat het doel van links naar overgeslagen pagina’s is om navigatie via het toetsenbord efficiënter te maken. Op welk moment moet u een “Sla de links over” link toevoegen?!</p>
+
+<p>In-paginalinks elders op een pagina kunnen ook worden gebruikt om gebruikers in staat te stellen naar andere soorten pagina-inhoud te springen of daar overheen te springen. De “Inhoud van het artikel” bovenaan deze pagina bevat bijvoorbeeld in-pagina links om de navigatie naar belangrijke paginagedeelten te vergemakkelijken. Een “skip link” kan ook worden gebruikt om de gebruiker snel verwarrende of potentieel ontoegankelijke inhoud te laten omzeilen, zoals ASCII art, complexe tabellen, of complexe sociale media feeds.</p>
+
+<h2 id="wcag-conformiteit">WCAG-conformiteit</h2>
+
+<p>WCAG 2.4.1 (Blokken omzeilen - niveau A) stelt: “Er is een mechanisme beschikbaar om blokken inhoud die op meerdere webpagina’s worden herhaald, te omzeilen.” Dit vereist niet noodzakelijkerwijs dat er een “skip link” aanwezig is. Het beginnen van de hoofdinhoud met een <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> of het gebruik van een <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code>-gebied zou een voldoende “mechanisme” zijn.  Maar omdat geen van beide technieken erg nuttig is voor ziende toetsenbordgebruikers zonder schermlezer of gespecialiseerde software, wordt een link overslaan sterk aanbevolen voor optimale toegankelijkheid op pagina’s met herhaalde navigatie.</p>
+
+<h3 id="koppen-en-regios">Koppen en regio’s</h3>
+
+<p>Het implementeren van de juiste titelstructuren (met name het beginnen van de hoofdinhoud met een <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code>) en regio’s (met name <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> en `&lt;main&gt;) is een essentieel aspect van toetsenbord-toegankelijkheid. Helaas ondersteunen browsers dit soort navigatie nog niet van nature, zonder het gebruik van extensies of een schermlezer. Hoewel overgeslagen navigatiekoppelingen een nogal onhandige en opdringerige oplossing zijn voor een reëel probleem, zijn ze toch vaak nodig om zo goed mogelijk tegemoet te komen aan de behoeften van alle toetsenbordgebruikers.</p>
+
+<p>Binnen webpagina’s en -toepassingen kan focusbeheer nodig zijn om ervoor te zorgen dat de toetsenbordfocus wordt ingesteld op inhoudselementen wanneer deze worden gepresenteerd of geactiveerd. Wanneer bijvoorbeeld een pop-upvenster verschijnt, zal de focus waarschijnlijk moeten worden ingesteld met JavaScript.
+Alternatieve leesvolgorde</p>
+
+<p>Sommige websites gebruiken CSS om de paginalay-out zo te veranderen dat de hoofdinhoud wordt gepresenteerd vóór de navigatie in de onderliggende broncode (die de leesvolgorde voor schermlezers en de toetsenbordnavigatie bepaalt), maar visueel na de navigatie komt. Omdat gebruikers van schermlezers en toetsenborden de navigatie als eerste tegenkomen, kan deze methode een link om de navigatie over te slaan overbodig maken.</p>
+
+<p>Wanneer de visuele volgorde niet overeenkomt met de navigatie- en leesvolgorde, kunnen gebruikers met een visuele toetsenbord- of schermlezer in de war raken wanneer hetgeen ze zien of waarnaar ze navigeren schijnbaar verspringt op de visuele pagina. Dit soort lay-outs wordt niet aanbevolen.</p>
+
+
+    </div>
+   </main><footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          <ul class="grid-row grid-gap">
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-lg:grid-col-4">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+              </div>
+            </div>
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//statistics.sophieschoice.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <script src="assets/js/uswds.min.js"></script>
+	</body>
+</html>

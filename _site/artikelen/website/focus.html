@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="nl_NL"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Focusindicators | Studiegids A11Y</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Focusindicators" />
+<meta name="author" content="Sophie Ragas" />
+<meta property="og:locale" content="nl_NL" />
+<meta name="description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<meta property="og:description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<link rel="canonical" href="http://localhost:4000/artikelen/website/focus.html" />
+<meta property="og:url" content="http://localhost:4000/artikelen/website/focus.html" />
+<meta property="og:site_name" content="Studiegids A11Y" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Focusindicators" />
+<meta name="twitter:site" content="@sophieschoice" />
+<meta name="twitter:creator" content="@Sophie Ragas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Focusindicators","url":"http://localhost:4000/artikelen/website/focus.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="<Project title>">Studiegids A11Y</a>
+          </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+  <button type="button" class="usa-nav__close">
+    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+  </button>
+  <ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Home</span>
+      </a>
+    </li>
+        <li class="usa-nav__primary-item">
+      <a href="artikelen.html" class="usa-nav-link">
+        <span>Artikelen</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Links</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="overons.html" class="usa-nav-link">
+        <span>Over ons</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="contact.html" class="usa-nav-link">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+  <section aria-label="Search component">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search"/>
+      <button class="usa-button" type="submit">
+        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+      </button>
+    </form>
+  </section>
+</nav>
+  </div>
+</header><main id="main-content">
+      <div class="grid-container usa-layout usa-intro">
+ <h1>Focusindicators</h1>
+<p>Een toetsenbordgebruiker gebruikt gewoonlijk de <kbd>tab</kbd>-toets om door interactieve elementen (links, knoppen, velden voor het invoeren van tekst, enz.) op een webpagina te navigeren. Wanneer er naar een item wordt getabt, heeft het toetsenbordfocus en kan het item worden geactiveerd of bewerkt met het toetsenbord.</p>
+
+<div class="toc_container">
+    <p class="toc_title">Inhoud</p>
+    <ol class="toc_list">
+        <li><a href="#problemen">Problemen</a></li>
+        <li><a href="#conclusie">Conclusie</a></li>
+    </ol>
+</div>
+
+<p>Een ziende gebruiker moet volgens de <a href="https://www.w3.org/Translations/WCAG21-nl/">Richtlijnen voor Toegankelijkheid van Webcontent</a> (WCAG) kunnen zien welk element op dat moment toetsenbordfocus heeft.</p>
+
+<div class="opmerking">
+<p>💡 <b>Opmerking</b>: focusindicatoren worden automatisch aangeboden door webbrowsers. Hoewel hun uiterlijk varieert afhankelijk van de browser, wordt het meestal weergegeven als een rand of markering (ook wel <span lang="en">outline</span> genoemd) rond het gefocuste element.</p> 
+</div>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="problemen">Problemen</h2>
+
+<p>Problemen op dit gebied worden vooral veroorzaakt door twee zaken:</p>
+
+<ul>
+  <li>de focusindicator is uitgeschakeld door <code>outline:0</code> of <code>outline:none</code> in de CSS-code. Dit is een inbreuk op criterium <a href="https://www.w3.org/Translations/WCAG21-nl/#focus-zichtbaar">2.4.7 Focus zichtbaar</a>.</li>
+  <li>de indicator is aanwezig, maar heeft niet voldoende contrast (contrast met de achtergrond dient minstens een verhouding te hebben van 3:1). Dit is een inbreuk op criterium <a href="https://www.w3.org/Translations/WCAG21-nl/#contrast-van-niet-tekstuele-content">1.4.11 Contrast van niet-tekstuele content</a>.</li>
+  <li>een element dat focus krijgt, verandert alleen van kleur en krijgt geen rand. Bijvoorbeeld een blauwe knop die bij focus groen wordt. Dit is een inbreuk op <a href="https://www.w3.org/Translations/WCAG21-nl/#gebruik-van-kleur">1.4.1 Gebruik van kleur</a>.</li>
+</ul>
+
+<div class="opmerking">
+<p>💡 <b>Opmerking</b>: in een update van WCAG die eraan komt (WCAG 2.2) komen er extra succescriteria bij die met focus te maken hebben. Verdiep je in wat je binnenkort over <a href="https://medium.com/eleven-ways/geef-je-bezoekers-focus-aac1baba2e48">focus in WCAG 2.2</a> kunt verwachten.</p> 
+</div>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="conclusie">Conclusie</h2>
+
+<p>Vermijd <code>outline:0</code> of <code>outline:none</code> of andere stijlen die de zichtbaarheid van focusindicatoren verwijderen of beperken.</p>
+
+<p>Leunen op de standaard indicatoren die browsers bieden wordt niet geadviseerd. De kleur kan contrastproblemen veroorzaken bij gekleurde achtergronden. En als een standaard outline voldoende contrast biedt, kan dit na een update van de browser ineens weer anders zijn. Plus dat het heel lastig wordt om in <strong>alle</strong> browsers een voldoende te scoren op contrast, omdat per browser de kleur licht kan verschillen. Op welk besturingssysteem een browser wordt gebruikt, kan ook verschil maken. Het is dus beter om zelf een kleur te vast te leggen in CSS.</p>
+
+<p>Ik raad aan om in de CSS de focusindicator vet te maken (minimaal 2 px dik) in een kleur die voldoende contrast biedt. Ook moet de indicator het element dat focus heeft helemaal omringen.</p>
+
+<div class="opmerking">
+<p>👉️ Opmerkingen? Vragen? Iets onduidelijk of onvolledig? Of vond je het helemaal geweldig? Stuur me een <a href="mailto:sophie@sophieschoice.net">mailtje met je feedback</a>!</p>
+</div>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+
+    </div>
+   </main><footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          <ul class="grid-row grid-gap">
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-lg:grid-col-4">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+              </div>
+            </div>
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//statistics.sophieschoice.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <script src="assets/js/uswds.min.js"></script>
+	</body>
+</html>

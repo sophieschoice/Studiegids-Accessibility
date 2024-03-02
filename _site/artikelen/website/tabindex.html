@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="nl_NL"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Het tabindex-attribuut | Studiegids A11Y</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Het tabindex-attribuut" />
+<meta name="author" content="Sophie Ragas" />
+<meta property="og:locale" content="nl_NL" />
+<meta name="description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<meta property="og:description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<link rel="canonical" href="http://localhost:4000/artikelen/website/tabindex.html" />
+<meta property="og:url" content="http://localhost:4000/artikelen/website/tabindex.html" />
+<meta property="og:site_name" content="Studiegids A11Y" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Het tabindex-attribuut" />
+<meta name="twitter:site" content="@sophieschoice" />
+<meta name="twitter:creator" content="@Sophie Ragas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Het tabindex-attribuut","url":"http://localhost:4000/artikelen/website/tabindex.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="<Project title>">Studiegids A11Y</a>
+          </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+  <button type="button" class="usa-nav__close">
+    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+  </button>
+  <ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Home</span>
+      </a>
+    </li>
+        <li class="usa-nav__primary-item">
+      <a href="artikelen.html" class="usa-nav-link">
+        <span>Artikelen</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Links</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="overons.html" class="usa-nav-link">
+        <span>Over ons</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="contact.html" class="usa-nav-link">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+  <section aria-label="Search component">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search"/>
+      <button class="usa-button" type="submit">
+        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+      </button>
+    </form>
+  </section>
+</nav>
+  </div>
+</header><main id="main-content">
+      <div class="grid-container usa-layout usa-intro">
+ <h1>Het tabindex-attribuut</h1>
+<p>Met het <code>tabindex</code>-attribuut kan de lees- en tabvolgorde worden beïnvloed. Dit heeft impact op gebruikers die afhankelijk zijn van een toetsenbord en gebruikers van screenreaders, omdat deze de volgorde in de broncode gebruiken. Het kent drie waarden:</p>
+
+<ul>
+  <li><code>tabindex="1"</code> (of elk getal groter dan 1) definieert een expliciete tab- of navigatievolgorde.</li>
+  <li><code>tabindex="0"</code> staat elementen toe, behalve links en formulierelementen, om toetsenbordfocus te krijgen. Het verandert de tabvolgorde niet, maar plaatst het element in de logische navigatiestroom, alsof het een link/knop op de pagina is.</li>
+  <li><code>tabindex="-1"</code> staat toe dat elementen, behalve links en formulier-elementen, een “programmatische” focus krijgen, wat betekent dat de focus op het element kan worden gezet door middel van scripting.</li>
+</ul>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="problemen">Problemen</h2>
+
+<p>Door de kracht en invloed van het tabindex-attribuut kunnen er diverse problemen ontstaan als deze niet goed wordt toegepast:</p>
+
+<ul>
+  <li>De visuele volgorde wijkt af van de volgorde in de broncode.</li>
+  <li>Focus en bedienbaarheid van focusbare items blijft niet behouden.</li>
+</ul>
+
+<p>Deze zaken zijn een inbreuk op succescriterium <a href="https://www.w3.org/Translations/WCAG21-nl/#focus-volgorde">2.4.3 Focus volgorde</a> in de <a href="https://www.w3.org/Translations/WCAG21-nl/">Richtlijnen voor Toegankelijkheid van Webcontent</a> (WCAG).</p>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="oplossingen">Oplossingen</h2>
+
+<p>Het <code>tabindex</code> attribuut met een <b>waarde van 1 of hoger</b> definieert expliciet een navigatievolgorde voor elementen die focus kunnen krijgen (meestal links en formulierelementen) binnen een pagina. Het kan ook worden gebruikt om te bepalen of elementen al dan niet focus moeten krijgen. <strong>Dit moet worden vermeden</strong>. Deze elementen zullen eerder toetsenbordfocus krijgen dan elementen zonder een <code>tabindex</code> (of <code>tabindex="0"</code>), wat resulteert in een volgorde die verschilt van de visuele volgorde. In plaats van <code>tabindex</code> te gebruiken, pas gewoon de volgorde in de broncode van de pagina aan om een logische navigatie- en leesvolgorde te bereiken.</p>
+
+<p>Een waarde van 0 geeft aan dat het element in de standaard navigatievolgorde moet worden geplaatst. Hierdoor kunnen elementen die niet van nature focus ontvangen (zoals <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code>, en <code>&lt;a&gt;</code> zonder <code>href</code>-attribuut), toetsenbordfocus krijgen. Links en formulierelementen zijn het beste voor bijna alle interactieve elementen, maar <code>tabindex=0</code> staat toe dat andere elementen focusbaar zijn en dus mogelijk interactie kunnen triggeren. Vaak zien we deze fout als developers denken op deze manier een <span lang="en">custom</span> component of widget toegankelijk voor toetsenbord te kunnen maken. Maar met <code>tabindex</code> maak je elementen <strong>niet bedienbaar</strong>. Het krijgt alleen focus. Zorg dat ARIA correct is toegepast en device onafhankelijke event handlers in JavaScript zijn gebruikt.</p>
+
+<p>Een <code>tabindex="-1"</code> verwijdert interactieve elementen uit de standaard navigatievolgorde. <strong>In bijna alle gevallen is dit niet wenselijk!</strong> Indien toegevoegd aan iets dat nog niet interactief is, staat <code>tabindex="-1"</code> toe dat het element programmatische focus krijgt. Dit betekent dat focus erop gezet kan worden met focus() scripting. Dit kan nuttig zijn voor elementen waarnaar niet rechtstreeks genavigeerd moet worden met de <kbd>tab</kbd>-toets, maar die toch toetsenbordfocus moeten krijgen. Voorbeelden hiervan zijn een modal of overlay dat moet worden gefocust wanneer het wordt geopend, of een foutmelding bij het indienen van een formulier die onmiddellijk focus moet krijgen wanneer een ongeldig formulier wordt ingediend.</p>
+
+<p>Een waarde van -1 kan ook nuttig zijn in complexe widgets en menu’s die gebruik maken van pijltjestoetsen, of andere sneltoetsen. Het kan ervoor zorgen dat slechts één element binnen een widget, zoals het actieve tabblad binnen een groep tabbladen voor een tabpaneel, navigeerbaar is met de <kbd>tab</kbd>-toets, terwijl de focus nog steeds kan worden ingesteld op andere onderdelen binnen de widget.</p>
+
+<div class="opmerking">
+<p>💡 <b>Opmerking</b>: Onthoud dat <code>tabindex="-1"</code> het element verwijdert uit de standaard navigatiestroom. Wijs het dus niet toe aan een element dat met het toetsenbord moet kunnen worden genavigeerd, zoals een link of knop waarop ziende gebruikers met de muis kunnen klikken.</p>
+</div>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+<h2 id="testen">Testen</h2>
+
+<p>Controleer je code of dit attribuut voorkomt.</p>
+
+<h2 id="conclusie">Conclusie</h2>
+
+<p>Gebruik het <code>tabindex</code>-attribuut liever niet. Gebruik het enkel in het geval van <span lang="en">custom</span> componenten of widgets. Maar zelfs in dat geval is het verstandig om na te denken of <span lang="en">native</span> HTML-elementen niet de voorkeur hebben boven <span lang="en">custom</span> componenten.</p>
+
+<div class="opmerking">
+<p>👉️ Opmerkingen? Vragen? Iets onduidelijk of onvolledig? Of vond je het helemaal geweldig? Stuur me een <a href="mailto:sophie@sophieschoice.net">mailtje met je feedback</a>!</p>
+</div>
+
+<p class="toplink">
+  <a href="#top" title="Terug naar boven">&uarr; Terug naar boven</a>
+</p>
+
+
+    </div>
+   </main><footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          <ul class="grid-row grid-gap">
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-lg:grid-col-4">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+              </div>
+            </div>
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//statistics.sophieschoice.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <script src="assets/js/uswds.min.js"></script>
+	</body>
+</html>

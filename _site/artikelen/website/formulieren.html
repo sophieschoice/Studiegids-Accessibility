@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="nl_NL"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Toegankelijke formulieren | Studiegids A11Y</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Toegankelijke formulieren" />
+<meta name="author" content="Sophie Ragas" />
+<meta property="og:locale" content="nl_NL" />
+<meta name="description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<meta property="og:description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<link rel="canonical" href="http://localhost:4000/artikelen/website/formulieren.html" />
+<meta property="og:url" content="http://localhost:4000/artikelen/website/formulieren.html" />
+<meta property="og:site_name" content="Studiegids A11Y" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Toegankelijke formulieren" />
+<meta name="twitter:site" content="@sophieschoice" />
+<meta name="twitter:creator" content="@Sophie Ragas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Toegankelijke formulieren","url":"http://localhost:4000/artikelen/website/formulieren.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="<Project title>">Studiegids A11Y</a>
+          </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+  <button type="button" class="usa-nav__close">
+    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+  </button>
+  <ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Home</span>
+      </a>
+    </li>
+        <li class="usa-nav__primary-item">
+      <a href="artikelen.html" class="usa-nav-link">
+        <span>Artikelen</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Links</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="overons.html" class="usa-nav-link">
+        <span>Over ons</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="contact.html" class="usa-nav-link">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+  <section aria-label="Search component">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search"/>
+      <button class="usa-button" type="submit">
+        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+      </button>
+    </form>
+  </section>
+</nav>
+  </div>
+</header><main id="main-content">
+      <div class="grid-container usa-layout usa-intro">
+ <h1>Toegankelijke formulieren</h1>
+<p>Formulieren zijn niet meer weg te denken uit het moderne web: we geven onze adresgegevens op voor een bestelling of boeken een hotel. Ze zijn dus cruciaal voor het uitvoeren van bepaalde acties en het is daarom belangrijk dat formulieren toegankelijk zijn. In de <a href="https://www.w3.org/Translations/WCAG21-nl/">Richtlijnen voor Toegankelijkheid van Webcontent</a> (WCAG) hebben daarom meerdere succescriteria betrekking op formulieren en formuliervalidatie. Onder andere wordt het volgende vereist:</p>
+
+<ul>
+  <li>zorg ervoor dat formulieren logisch en gemakkelijk te gebruiken zijn</li>
+  <li>zorg ervoor dat formulieren toetsenbord-toegankelijk zijn</li>
+  <li>gebruik labels</li>
+  <li>maak (fout)meldingen toegankelijk</li>
+</ul>
+
+<h2 id="mogelijke-problemen">Mogelijke problemen</h2>
+
+<p>We bespreken even de problemen die voor kunnen komen met formulieren.</p>
+
+<h3 id="labels-ontbreken-of-zijn-niet-geassocieerd">Labels ontbreken of zijn niet geassocieerd</h3>
+
+<p>Een label beschrijft de functie van een formulierelement (tekstveld, selectievakje, keuzerondje, menu, enzovoort), en staat er meestal naast. Ziende gebruikers zien het verband, maar anderen niet. Het is daarom belangrijk dat er niet enkel een label aanwezig is, maar deze ook gekoppeld/geassocieerd is met het bijbehorende formulierelement. Dit zorgt ervoor dat een schermlezer het tekstlabel aankondigt wanneer de gebruiker naar het formulierelement navigeert.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>Naam:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">autocomplete=</span><span class="s">"name"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>Overeenkomende for- en id-waarden associëren het label met het bijbehorende formulierelement. Omdat id-attribuutwaarden op elke pagina uniek moeten zijn, kan een formulierbesturingselement maar één gekoppeld label hebben.</p>
+
+<p>Je kunt de koppeling ook tot stand brengen door de labeltekst en de invoer binnen het element te plaatsen (en geen for en id te gebruiken).</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label&gt;</span>Naam: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">autocomplete=</span><span class="s">"name"</span><span class="nt">&gt;&lt;/label&gt;</span></code></pre></figure>
+
+<p>Groepen besturingselementen, zoals checkboxen en keuzerondjes, hebben soms een label van een hoger niveau nodig (zoals “Verzendmethode” voor een groep verzendopties). Deze informatie kan aan de groep van formulierelementen worden gekoppeld met <code>&lgt;fieldset&gt;</code> en <code>&lt;legend&gt;</code>. De <code>&lgt;fieldset&gt;</code> definieert de groep en de <code>&lt;legend&gt;</code> bevat de beschrijving. Schermlezers kondigen de <code>&lt;legend&gt;</code> aan wanneer gebruikers naar de groep navigeren.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset&gt;</span>
+<span class="nt">&lt;legend&gt;</span>Selecteer jouw pizza:<span class="nt">&lt;/legend&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"ham"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"toppings"</span> <span class="na">value=</span><span class="s">"ham"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"ham"</span><span class="nt">&gt;</span>Ham<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"pepperoni"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"toppings"</span> <span class="na">value=</span><span class="s">"pepperoni"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"pepperoni"</span><span class="nt">&gt;</span>Pepperoni<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"margaritha"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"toppings"</span> <span class="na">value=</span><span class="s">"margaritha"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"margaritha"</span><span class="nt">&gt;</span>Margaritha<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"hawai"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"toppings"</span> <span class="na">value=</span><span class="s">"hawai"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"hawai"</span><span class="nt">&gt;</span>Hawaï<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
+
+<p>De <code>&lgt;fieldset&gt;</code> bevat de groep van checkboxen, en de <code>&lt;legend&gt;</code> labelt de groep (hetzelfde principe geldt voor keuzerondjes). Screenreaders kunnen de <code>&lt;legend&gt;</code> herhalen voor elk vakje in de groep, dus de tekst moet kort en beschrijvend zijn.</p>
+
+<p>Ook keuzelijsten hebben een een label nodig:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"favcity"</span><span class="nt">&gt;</span>Which is your favorite city?<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"favcity"</span> <span class="na">name=</span><span class="s">"select"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Amsterdam<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Buenos Aires<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Delhi<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Hong Kong<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>London<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Los Angeles<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Moscow<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Mumbai<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>New York<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>São Paulo<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Tokyo<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre></figure>
+
+<p>Opmerking
+Vermijd het gebruik van meerkeuzemenu’s. Niet alle browsers bieden intuïtieve toetsenbordnavigatie voor deze menu’s. Veel gebruikers weten niet hoe ze <kbd>Control</kbd>/<kbd>Command</kbd> of <kbd>Shift</kbd> + klik moeten gebruiken om meerdere items te selecteren. Een groep aankruisvakjes biedt soortgelijke functionaliteit op een meer toegankelijke manier.</p>
+
+<p>Nog een voordeel van labels is dat de gebruiker op het label kan klikken om de focus op het formulier-element te zetten. Dit is handig op kleine schermen en voor sommige mensen met motorische handicaps, vooral wanneer kleine aankruisvakjes en keuzerondjes worden gebruikt.</p>
+
+<p>Klikken op labels is ook een gemakkelijke manier om te controleren of het formulier correct is gelabeld. Als klikken op het label de focus op het formulierelement zet of het activeert, dan is dat label programmatisch geassocieerd.</p>
+
+<p>ARIA-labels (aria-labelledby en aria-label) kunnen worden gebruikt wanneer het niet mogelijk is om <label> te gebruiken.</label></p>
+
+<ul>
+  <li>het ontbreken van labels is een inbreuk op succescriterium <a href="https://www.w3.org/Translations/WCAG21-nl/#labels-of-instructies">3.3.2 Labels of instructies</a>.</li>
+  <li>als er een label aanwezig is, maar niet gekoppeld met het bijbehorende formulierelement, is dit een inbreuk op succescriterium <a href="https://www.w3.org/Translations/WCAG21-nl/#info-en-relaties">1.3.1 Info en relaties</a>.</li>
+</ul>
+
+<h3 id="toetsenbordbediening">Toetsenbordbediening</h3>
+
+<p>Alle velden en opties in een formulier moeten bedienbaar zijn met toetsenbord.</p>
+
+<p>Een jump menu is a een <code>&lt;select&gt;</code> (of een custom component die zich zo gedraagt) die pagina veranderingen of navigatie triggert wanneer een gebruiker klikt op een optie met de muis.
+Bij navigatie met een toetsenbord kan alleen al het bladeren door de opties met de pijltjestoetsen de verandering triggeren. Deze onverwachte navigatie kan toetsenbordgebruikers en gebruikers van screenreaders in verwarring brengen en desoriënteren.</p>
+
+<p>Dit is op te lossen door een knop naast de keuzelijst te zetten, waarmee een gebruiker zijn keuze mee kan bevestigen.</p>
+
+<h3 id="automatisch-aanvullen">Automatisch aanvullen</h3>
+
+<p>Formuliervelden waarin bepaalde typen gebruikersspecifieke informatie worden verzameld, hebben de juiste attributen voor autocomplete nodig om het invoergedeelte te identificeren. Gebruikers hebben er baat bij wanneer veelgebruikte veldtypen (naam, adres, geboortedatum, etc.) op consistente wijze op het web worden weergegeven. De mogelijkheid om het doel van elk veld programmatisch te bepalen maakt het invullen van formulieren eenvoudiger, vooral voor mensen met cognitieve beperkingen. Hier kan het <code>autocomplete</code> attribuut voor worden gebruikt.</p>
+
+<p>De MDN web docs hebben een <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">compleet overzicht van alle waarden voor het autocomplete attribuut</a> die je kan gebruiken:</p>
+
+<h3 id="verplichte-velden">Verplichte velden</h3>
+
+<p>Verplichte velden worden gewoonlijk aangeduid met een asterisk, maar gebruikers begrijpen deze conventie niet altijd. Maar naast visueel moet dit ook wel programmatisch aangeduid worden, zodat screenreaders dit kunnen aankondigen.</p>
+
+<p>Als de aanduiding dat een veld vereist is buiten het invoerlabel wordt gepresenteerd, zal de toepassing van het attribuut <code>aria-required="true"</code> ervoor zorgen dat screenreaders (naast het label) aankondigen dat het veld verplicht is. Dit attribuut heeft geen visuele impact en verzorgt verder ook geen validatie van formulieren.</p>
+
+<h3 id="ongeldige-velden">Ongeldige velden</h3>
+
+<p>Ongeldige velden worden vaak visueel aangeduid (met kleurverandering of icoontjes). Maar programmatisch ontbreekt deze informatie vaak, waardoor screenreaders dit niet door kunnen geven aan hun gebruikers.</p>
+
+<p>Om programmatisch aan te geven aan een veld ongeldig is, kan het <code>aria-invalid="false"</code> attribuut gebruiken. Je kunt dit toepassen op verplichte velden die de gebruiker leeg heeft gelaten of op velden die op een andere manier niet gevalideerd zijn. De standaardwaarde van het attribuut is <code>false</code>, maar dient bij het valideren van het formulier met JavaScript naar <code>true</code> getoggeld worden als een veld ongeldige invoer bevat.</p>
+
+<p>Voorbeeld:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"name5"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">autocomplete=</span><span class="s">"name"</span> <span class="na">aria-invalid=</span><span class="s">"true"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h3 id="instructies-ontbreken-of-worden-niet-voorgelezen">Instructies ontbreken of worden niet voorgelezen</h3>
+
+<p>Uitleg en tips bij een formulier, of bij specifieke velden, is belangrijk. Als een datum op een bepaalde manier ingevuld moet worden, bijvoorbeeld.</p>
+
+<p>Gebruikers van screenreaders navigeren met de Tab-toets. Hoewel labels worden aangekondigd wanneer formulierelementen toetsenbordfocus krijgen, wordt andere tekst tussen de formulierbesturingselementen meestal overgeslagen. Zorg ervoor dat alle instructies aan het begin van het formulier staan, of koppel ze aan specifieke velden met <code>aria-describedby</code>.</p>
+
+<p>Ook voor mensen die wel zien, zijn instructies belangrijk. Zorg daarom dat uitleg of tips bij een veld zowel visueel al programmatisch worden meegegeven.</p>
+
+<h3 id="validatie">Validatie</h3>
+
+<p>Formuliervalidatie zorgt ervoor dat webformulieren worden ingevuld en verzonden met alle noodzakelijke informatie in het juiste formaat. Foutherstel begeleidt een gebruiker bij het herstellen van ontbrekende of onjuist geformatteerde informatie als dit wordt ontdekt.</p>
+
+<p>Formuliervalidatie en foutherstel kunnen op verschillende manieren worden geïmplementeerd:</p>
+
+<ul>
+  <li>server-zijde: de formulierinformatie wordt ingediend en geanalyseerd door de webserver, en de nodige feedbackberichten worden naar een nieuw gegenereerde webpagina geschreven.</li>
+  <li>clientzijde: de formuliervalidatie en het foutherstel worden uitgevoerd in de webclient of -browser met behulp van JavaScript en gegenereerd in de webpagina.</li>
+</ul>
+
+<p>Voordelen van server-side validatie en foutherstel zijn onder meer:</p>
+
+<ul>
+  <li>Het formulier kan worden ingevuld en verzonden zonder onderbreking van de validatie waarschuwingen, fouten of waarschuwingen.</li>
+  <li>De gebruiker hoeft geen scripting ingeschakeld te hebben in zijn browser.</li>
+  <li>Validatiemechanismen zijn moeilijker te omzeilen of te wijzigen, waardoor het veiliger is.</li>
+</ul>
+
+<p>Voordelen van client-side validatie en foutherstel:</p>
+
+<ul>
+  <li>Validatie kan in real time plaatsvinden, voordat de gebruiker de formuliergegevens naar de server stuurt.</li>
+  <li>Voor de functionaliteit is geen server-side scripting nodig. Sommige gebruikers kunnen scripting in hun browser uitschakelen.</li>
+</ul>
+
+<p>Daarom zouden ontwikkelaars geen client-side scripting mogen vereisen om het webformulier nauwkeurig te kunnen invullen en verzenden. Bovendien kan elke client-side validatie of informatie gemakkelijk worden gewijzigd of uitgeschakeld in de browser. Voor de beste resultaten kunnen ontwikkelaars zowel server-side als client-side validatie en foutherstel gebruiken om zowel efficiëntie als veiligheid te bieden.</p>
+
+<p>Formuliervalidatie zelf wordt meestal achter de schermen uitgevoerd en levert doorgaans geen toegankelijkheidsproblemen op, zolang de methode om het formuliervalidatiemechanisme aan te roepen maar toegankelijk is. Dit betekent dat het validatie- en verzendproces beschikbaar moet zijn bij gebruik van zowel de muis als het toetsenbord.</p>
+
+<p>Het formulier moet ook naar de server worden verzonden als client-side scripting niet beschikbaar is. Formulieren die alleen afhankelijk zijn van scriptfuncties of event handlers moeten vermeden worden. Gebruik in plaats daarvan een echte URL-actiewaarde voor het formulier. Client-side validatie kan nog steeds worden aangeroepen, en het zou eerst worden verwerkt als scripting is ingeschakeld.</p>
+
+<h3 id="foutherstel">Foutherstel</h3>
+
+<p>Als client-side of server-side validatie fouten in het formulier ontdekt, dan is er een 3-stappen proces om te zorgen voor bruikbaar en toegankelijk foutherstel:</p>
+
+<ul>
+  <li>Waarschuw de gebruiker op een duidelijke en toegankelijke manier over de aanwezigheid van de fout.</li>
+  <li>Geef de gebruiker gemakkelijk toegang tot de formulierelementen die gewijzigd moeten worden.</li>
+  <li>Het formulier opnieuw indienen en valideren.</li>
+</ul>
+
+<p>Er zijn drie manieren om aan deze eisen te voldoen. Elke aanpak heeft voor- en nadelen en kan optimaal zijn, afhankelijk van de inhoud, lay-out en complexiteit van het formulier.</p>
+
+<ol>
+  <li>Informeren en dan focus geven</li>
+</ol>
+
+<p>De eerste stap is om de gebruiker te informeren dat er een fout is opgetreden. Deze foutmelding moet zichtbaar, informatief en direct toegankelijk zijn. Een manier om dit te bereiken is het gebruik van een JavaScript alert box - de browser geeft dan een zeer toegankelijke alert. Een ander alternatief is een modal dialog om de gebruiker op de hoogte te brengen van de fout, hoewel dialogs veel meer inspanningen vereisen om de toegankelijkheid te garanderen.</p>
+
+<p>JavaScript-waarschuwing die vraagt om een waarde in te voeren voor het veld Voornaam.
+Het voordeel van de aanpak “eerst waarschuwen, dan scherpstellen” is dat gebruikers onmiddellijk op de hoogte worden gebracht van fouten en het probleem vervolgens gemakkelijk direct kunnen oplossen. Het belangrijkste nadeel is dat slechts één fout per keer wordt aangegeven en aangepakt.</p>
+
+<ol>
+  <li>Geef fouten bovenaan weer</li>
+</ol>
+
+<p>De foutmelding kan ook op de webpagina zelf worden geschreven. Wanneer client-side scripting beschikbaar is, kan de foutmelding naar de pagina worden geschreven voordat het formulier wordt verzonden. Met server-side scripting wordt de formulierpagina meestal opnieuw gegenereerd om het oorspronkelijke formulier met de juiste boodschap te bevatten.</p>
+
+<p>De “Errors on top” aanpak toont de foutmelding boven het formulier. Bij presentatie moet de focus op deze foutmelding worden gezet, zodat gebruikers van schermlezers en toetsenborden de foutmelding onmiddellijk kunnen openen zonder deze te hoeven zoeken tussen de rest van de pagina-inhoud. De focus kan op het bericht worden gezet met client-side scripting met behulp van JavaScript focus(), of de server-gegenereerde pagina kan een ankernaam in de URL opnemen (bijv. http://myserver.com/form.php#errormessage) die de focus direct op het foutberichtelement zal zetten als het de bijbehorende id-attribuutwaarde krijgt (bijv. <code class="language-plaintext highlighter-rouge">&lt;p id="errormessage"&gt;</code>).
+In de foutmelding moet duidelijk worden beschreven welke fouten zich voordoen en hoe deze moeten worden opgelost. Bijvoorbeeld: “Cursusnummer is niet geldig” is niet zo nuttig als “Cursusnummer moet een getal van 3 cijfers zijn”. Het kan nuttig zijn de gebruiker te laten weten hoeveel fouten er zijn ontdekt.
+Zodra de gebruiker de foutmelding te zien krijgt, moet een mechanisme worden geboden om snel toegang te krijgen tot de formulierinvoer(en) die moet(en) worden gecorrigeerd. In de foutmelding kan een link worden opgenomen om de aandacht op het juiste formulierelement te vestigen.
+Voorbeeld van een foutmelding met directe links naar de te herstellen formulierelementen.
+Het voordeel van de “Errors on top” aanpak is dat alle fouten samen worden gepresenteerd. Het nadeel is dat als er veel fouten zijn, het moeilijk kan zijn voor de gebruiker om ze allemaal te onthouden, te vinden en aan te pakken.</p>
+
+<ol>
+  <li>Inline fouten</li>
+</ol>
+
+<p>Een andere aanpak is om de foutmeldingen binnen het formulier weer te geven in de context van het formulierelement dat aandacht nodig heeft. Deze aanpak vereist visueel onderscheidende foutmeldingen, zodat de visuele aandacht er onmiddellijk op wordt gevestigd. De foutmeldingen moeten gekoppeld worden aan hun respectievelijke besturingselementen (via labeling of aria-describedby). Het is meestal het beste om de focus te leggen op het eerste besturingselement dat aandacht nodig heeft.
+Het voordeel van de “Inline errors” aanpak is dat de fouten verschijnen in context met hun respectievelijke controles. Het nadeel is dat de gebruiker visueel moet scannen of navigeren door het formulier om de ongeldige controles en hun respectievelijke foutmeldingen te ontdekken. Dit kan enige tijd duren.
+Een combinatie van “fouten bovenop” en “Inline fouten” technieken kan vaak optimaal zijn, omdat het profiteert van de voordelen van beide benaderingen terwijl het de nadelen minimaliseert.
+aria-invalid
+Ongeacht het mechanisme dat gebruikt wordt om formulierfouten te herkennen en te herstellen, moet aria-invalid=”true” over het algemeen ingesteld worden op elk ongeldig formulierelement. Dit attribuut zorgt ervoor dat screenreaders het besturingselement als “ongeldig” herkennen of als iets dat aandacht nodig heeft.</p>
+
+<h2 id="samenvatting">Samenvatting</h2>
+
+<p>In alle gevallen kan een zorgvuldige gebruikerstest meestal moeilijkheden of problemen aan het licht brengen in de bruikbaarheid van formulieren, de validatie en de mechanismen voor foutherstel. Hoewel er veel methoden zijn om de bruikbaarheid en validatie van formulieren en een toegankelijk, gebruikersvriendelijk foutherstel te garanderen, moeten de volgende algemene principes worden toegepast:</p>
+
+<ul>
+  <li>Bouw formulieren die gemakkelijk te gebruiken en intuïtief zijn, met alle nodige instructies, aanwijzingen en prompts.</li>
+  <li>Zorg ervoor dat de formulieren toegankelijk zijn via het toetsenbord.</li>
+  <li>Koppel formulier <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>-elementen aan formulierelementen.</li>
+  <li>Gebruik fieldsets en legenda’s om groepen selectievakjes en keuzerondjes aan elkaar te koppelen.</li>
+  <li>Voeg noodzakelijke instructies toe aan formulier <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code>-elementen (bijv. verplichte of speciaal opgemaakte besturingselementen)</li>
+  <li>Steun niet alleen op JavaScript voor formulierindiening, validatie en foutherstel.</li>
+  <li>Informeer de gebruiker op een duidelijke en toegankelijke manier over eventuele validatiefouten met informatieve feedbackberichten.</li>
+  <li>Geef de gebruiker gemakkelijk toegang tot de formulierelementen die moeten worden gewijzigd.</li>
+  <li>Sta herindiening en hervalidatie van formulierinformatie toe.</li>
+</ul>
+
+
+    </div>
+   </main><footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          <ul class="grid-row grid-gap">
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-lg:grid-col-4">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+              </div>
+            </div>
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//statistics.sophieschoice.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <script src="assets/js/uswds.min.js"></script>
+	</body>
+</html>

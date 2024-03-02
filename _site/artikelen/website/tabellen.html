@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl_NL"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Toegankelijke tabellen | Studiegids A11Y</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Toegankelijke tabellen" />
+<meta name="author" content="Sophie Ragas" />
+<meta property="og:locale" content="nl_NL" />
+<meta name="description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<meta property="og:description" content="Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat." />
+<link rel="canonical" href="http://localhost:4000/artikelen/website/tabellen.html" />
+<meta property="og:url" content="http://localhost:4000/artikelen/website/tabellen.html" />
+<meta property="og:site_name" content="Studiegids A11Y" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Toegankelijke tabellen" />
+<meta name="twitter:site" content="@sophieschoice" />
+<meta name="twitter:creator" content="@Sophie Ragas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Toegankelijke tabellen","url":"http://localhost:4000/artikelen/website/tabellen.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="<Project title>">Studiegids A11Y</a>
+          </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+  <button type="button" class="usa-nav__close">
+    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+  </button>
+  <ul class="usa-nav__primary usa-accordion">
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Home</span>
+      </a>
+    </li>
+        <li class="usa-nav__primary-item">
+      <a href="artikelen.html" class="usa-nav-link">
+        <span>Artikelen</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="javascript:void(0);" class="usa-nav-link">
+        <span>Links</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="overons.html" class="usa-nav-link">
+        <span>Over ons</span>
+      </a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <a href="contact.html" class="usa-nav-link">
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+  <section aria-label="Search component">
+    <form class="usa-search usa-search--small" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search"/>
+      <button class="usa-button" type="submit">
+        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+      </button>
+    </form>
+  </section>
+</nav>
+  </div>
+</header><main id="main-content">
+      <div class="grid-container usa-layout usa-intro">
+ <h1>Toegankelijke tabellen</h1>
+<p>Tabellen worden veel gebruikt op het web. En er kunnen makkelijk inbreuken op de <a href="https://www.w3.org/Translations/WCAG21-nl/">Richtlijnen voor Toegankelijkheid van Webcontent</a> (WCAG). Het meest voorkomende probleem is:</p>
+
+<ul>
+  <li>er zijn geen koppen voor kolommen en/of rijen gedefinieerd.</li>
+  <li>er worden tabellen gebruiikt voor layout/opmaak.</li>
+</ul>
+
+<div class="opmerking">
+<p>💡 <b>Opmerking</b>: tabellen gebruiken om de lay-out te maken van een website, is in principe geen inbreuk op WCAG. Maar het is best practice om lay-out via CSS te maken en er geen tabellen meer voor te gebruiken. Lay-out tabellen zijn wel een inbreuk als de `<th>`, `<summary>` en `<caption>` elementen worden gebruikt en de attributen headers en scope. &lt;/p&gt;
+&lt;/div&gt;
+
+Het veiligste is om tabellen enkel te gebruiken om gegevens/data weer te geven. 
+
+## Correct aanduiden gegevenstabellen
+
+Gegevenstabellen zijn bedoeld om informatie in tabelvorm te presenteren in een raster, of matrix, en om kolommen of rijen te hebben die de betekenis van de informatie in het raster weergeven. Ziende gebruikers kunnen een tabel visueel scannen. Zij kunnen snel zien welke gegevens in welke rij en/of kolom thuishoren. Iemand die de tabel niet kan zien, kan deze visuele associaties niet maken, dus moet de juiste markup worden gebruikt om een programmatische associatie te maken tussen elementen in de tabel. Wanneer de HTML-markup correct is, kunnen gebruikers van screenreaders cel per cel door de gegevenstabellen navigeren en worden de kolom- en rijkoppen uitgesproken.
+
+### Gebruik het <caption> element
+
+Gegevenstabellen hebben vaak een korte beschrijvende tekst voor of na de tabel die de inhoud van die tabel aangeeft. Deze tekst moet aan de tabel worden gekoppeld met behulp van het `<caption>` element. Het `<caption>` element moet het eerste zijn na het `<table>` element.
+
+```
+<table>
+<caption>Shelly's Dochters</caption>
+</table>
+```
+
+Hoewel het niet noodzakelijk is dat elke tabel een bijschrift heeft, is het over het algemeen erg nuttig. Indien aanwezig, moet het aan de tabel worden gekoppeld met behulp van het `<caption>` element.
+
+### Identificeer rij- en kolomkoppen
+
+Een belangrijke stap voor het maken van een toegankelijke gegevenstabel is het aanduiden van rij- en/of kolomkoppen. In de opmaak wordt het `<td>` element gebruikt voor tabel data cellen en het `<th>` element wordt gebruikt voor tabel header cellen. Tabelkoppen mogen nooit leeg zijn. Dit is vooral van belang voor de linkerbovenhoek van sommige tabellen
+
+Het scope attribuut geeft aan of een tabelkop een kolomkop of een rijkop is. Hier is de opmaak voor de tabel, met gebruik van het scope attribuut:
+
+```
+<table>
+<caption>Shelly's Dochters</caption>
+<tr>
+<th scope="col">Naam</th>
+<th scope="col">Leeftijd</th>
+<th scope="col">Verjaardag</th>
+</tr>
+<tr>
+<th scope="row">Jackie</th>
+<td>5</td>
+<td>5 april</td>
+</tr>
+<tr>
+<th scope="row">Beth</th>
+<td>8</td>
+<td>14 januari</td>
+</tr>
+&lt;/tabel&gt;
+``` 
+Het `scope="col"` attribuut geeft aan dat het een koptekst is voor die kolom. Met `scope="row"`geef je een koptekst aan voor die rij. Alle `<th>`-elementen moeten over het algemeen altijd een scope-attribuut hebben. Hoewel screenreaders aan de hand van de tabelopmaak kunnen raden of een koptekst een kolom- of een rijkoptekst is, zorgt het gebruik van het scope-attribuut dat een tabel correct geinterpreteerd wordt.
+
+Het scope attribuut is zelfs van toepassing bij complexe tabellen die `rowspan` gebruiken. 
+
+<div class="opmerking">
+<p>💡 <b>Opmerking</b>: hoewel het al jaren standaard opmaak voor tabellen is, ondersteunen sommige schermlezers nog steeds complexe tabellen niet volledig. Probeer waar mogelijk de tabel 'plat' te maken en koppen die meerdere rijen of kolommen overspannen te vermijden.</p>
+</div>
+
+## De attributen headers en id
+
+Een andere manier om cellen en koppen te associëren is het gebruik van de attributen `headers` en `id`. Deze methode wordt over het algemeen NIET aanbevolen omdat `scope` meestal voldoende is voor de meeste tabellen, zelfs als de tabel complex is met koppen die meerdere kolommen of rijen overspannen..
+
+Met deze aanpak krijgt elke `<th>` een unieke id-attribuutwaarde. Vervolgens krijgt elke `<td>`-cel in de tabel een headers-attribuut met waarden die overeenkomen met elke `<th>`-id-waarde waaraan de cel is gekoppeld. De waarden worden gescheiden door spaties en moeten worden vermeld in de volgorde waarin een schermlezer ze zou moeten lezen. Bij gebruik van headers/id in het voorbeeld hierboven, zou de cel voor Jackie's leeftijd kunnen worden gemarkeerd als ```<td headers="geboorte jackie leeftijd">5</td>```).
+
+Nogmaals, het moet benadrukt worden dat deze methode ingewikkelder is, veel meer markup gebruikt (en potentieel om gebroken te worden), en zelden nodig is. Gebruik in plaats daarvan `scope`.
+
+## Gebruik proportionele grootte, eerder dan absolute grootte
+
+De regel die geldt voor lay-out tabellen, geldt ook voor gegevenstabellen. Laat waar mogelijk het browservenster de breedte van de tabel bepalen, om het horizontaal scrollen van slechtzienden te beperken. Als celbreedtes moeten worden gedefinieerd, gebruik dan relatieve waarden, zoals percentages, in plaats van pixelwaarden. Gedefinieerde celhoogtes moeten over het algemeen vermeden worden, zodat de cel naar beneden kan uitzetten om de inhoud aan te passen - iets wat vooral nuttig is voor gebruikers met slecht zicht die tekstinhoud kunnen vergroten.
+
+## Andere opmaak
+
+Het attribuut `summary` kan worden gebruikt om een samenvatting te geven van de structuur van een gegevenstabel (niet van de inhoud). Ondersteuning varieert, maar in het algemeen is het screenreader-specifiek (het is niet toegankelijk voor iemand anders) en wordt het niet goed ondersteund. Bovendien maakt het attribuut geen deel uit van de HTML5-specificatie. In het algemeen, als een tabel zo complex is dat er een uitleg nodig is over hoe hij is opgebouwd, is het waarschijnlijk niet erg toegankelijk en moet het worden vereenvoudigd. Om deze redenen raden wij het gebruik van `summary` af. Als het wordt gebruikt, mag het nooit worden gebruikt voor opmaaktabellen.
+
+De `thead` en `tfoot` elementen definiëren header en footer rijen voor tabellen. Ze bieden geen toegankelijkheidsfunctionaliteit en zijn over het algemeen alleen van nut wanneer een lange tabel wordt afgedrukt - de kop- en/of voetrijen zullen zich herhalen bovenaan of onderaan elke afgedrukte pagina. Op dezelfde manier definieert het `tbody` element de content van een gegevenstabel (dus alles wat geen `thead` of `tfoot` is). Ook dit element biedt geen extra toegankelijkheidsvoordelen, maar het kan geen kwaad het te gebruiken voor tabelstyling of andere redenen.
+
+## Conclusie
+
+Zorg ervoor dat tabellen zo eenvoudig mogelijk zijn, gebruik kolom- of rijkoppen en koppel deze op een correcte manier met het `scope` attribuut. 
+</th></td></th></th></table></th></td></caption></table></caption></caption></caption></caption></summary></th></p></div>
+
+
+    </div>
+   </main><footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          <ul class="grid-row grid-gap">
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+            <li
+              class="
+                mobile-lg:grid-col-6
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a class="usa-footer__primary-link" href="javascript:void(0);"
+                >&lt;Primary link&gt;</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-lg:grid-col-4">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+              </div>
+            </div>
+            <div
+              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
+            >
+              <div class="usa-footer__contact-info">
+                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer><script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//statistics.sophieschoice.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <script src="assets/js/uswds.min.js"></script>
+	</body>
+</html>
