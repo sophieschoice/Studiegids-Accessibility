@@ -50,6 +50,15 @@
 <loc>http://localhost:4000/artikelen/website/javascript.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/artikelen/website/koppen.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/artikelen/website/landmarks.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/artikelen/website/lijsten.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/artikelen/website/links.html</loc>
 </url>
 <url>
@@ -69,6 +78,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/artikelen/website/skipnav.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/artikelen/handicaps/soorten.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/artikelen/website/svg.html</loc>
