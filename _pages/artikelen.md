@@ -17,7 +17,7 @@ permalink: /artikelen.html
         </ul>
     <li>Handicaps</li>
         <ul>
-            <li>De verschillende soorten handicaps</li>
+            <li><a href="/artikelen/handicaps/soorten.html">De verschillende soorten handicaps</a></li>
             <li><a href="/artikelen/handicaps/theoretische_modellen.html">De 7 theoretische modellen van handicaps</a></li>
             <li>Het verschil tussen ondersteunende technologieën en aanpassingsstrategieën</li>
             <li>Voorbeelden van ondersteunende technologieën en aanpassingsstrategieën</li>
