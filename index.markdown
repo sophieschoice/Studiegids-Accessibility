@@ -28,6 +28,6 @@ layout: home
         	<li>Meer bronnen toevoegen over het toegankelijk maken van apps.</li>
         	<li>Informatie uitschrijven over het toegankelijk maken van documenten.</li>
     	</ul>
-        <a class="usa-button usa-button--big" href="/werk.html">Help mee op GitHub!</a>
+        <a class="usa-button usa-button--big" href="https://github.com/sophieschoice/Studiegids-Accessibility">Help mee op GitHub!</a>
       </div>
     </section>
