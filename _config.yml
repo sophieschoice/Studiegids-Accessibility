@@ -28,7 +28,7 @@ twitter:
   card: summary
 lang: nl_NL
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://accessibility.sophieschoice.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://studiegids.sophieschoice.net" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: blog

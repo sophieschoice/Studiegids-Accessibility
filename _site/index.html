@@ -21,167 +21,177 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Sophie Ragas"},"description":"Alle informatie die je nodig hebt om digitale toegankelijkheid te leren. Praktische tips, veelvoorkomenmde fouten, alles over WCAG, testen en screenreaders om klaar te zijn voor je IAAP certificaat.","headline":"Studiegids A11Y","name":"Studiegids A11Y","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/uswds.min.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
+<link rel="stylesheet" href="/assets/uswds/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/uswds/js/uswds-init.min.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Studiegids A11Y" /></head>
 <body><a class="usa-skipnav" href="#main-content">Ga direct naar de inhoud</a>
 <div class="usa-overlay"></div>
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo">
-        <em class="usa-logo__text">
-          <a href="/" title="<Project title>">Studiegids A11Y</a>
-          </em>
-      </div>
-      <button type="button" class="usa-menu-btn">Menu</button>
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text"><a href="/" title="<Project title>">Studiegids A11Y</a></em>
     </div>
-    <nav aria-label="Primary navigation" class="usa-nav">
-  <button type="button" class="usa-nav__close">
-    <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
-  </button>
-  <ul class="usa-nav__primary usa-accordion">
-    <li class="usa-nav__primary-item">
-      <a href="javascript:void(0);" class="usa-nav-link">
-        <span>Home</span>
-      </a>
-    </li>
-        <li class="usa-nav__primary-item">
-      <a href="artikelen.html" class="usa-nav-link">
-        <span>Artikelen</span>
-      </a>
-    </li>
-    <li class="usa-nav__primary-item">
-      <a href="javascript:void(0);" class="usa-nav-link">
-        <span>Links</span>
-      </a>
-    </li>
-    <li class="usa-nav__primary-item">
-      <a href="overons.html" class="usa-nav-link">
-        <span>Over ons</span>
-      </a>
-    </li>
-    <li class="usa-nav__primary-item">
-      <a href="contact.html" class="usa-nav-link">
-        <span>Contact</span>
-      </a>
-    </li>
-  </ul>
-  <section aria-label="Search component">
-    <form class="usa-search usa-search--small" role="search">
-      <label class="usa-sr-only" for="search-field">Search</label>
-      <input class="usa-input" id="search-field" type="search" name="search"/>
-      <button class="usa-button" type="submit">
-        <img src="/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
-      </button>
-    </form>
-  </section>
-</nav>
+    <button type="button" class="usa-menu-btn">Menu</button>
   </div>
-</header><main id="main-content">
-          
+   <nav aria-label="Hoofdnavigatie" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="/assets/uswds/img/usa-icons/close.svg" role="img" alt="Sluit menu" />
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="/index.html" class="usa-nav-link"><span>Home</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/basis.html" class="usa-nav-link"><span>Basis</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/richtlijnen.html" class="usa-nav-link"><span>Richtlijnen en wetten</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/strategie.html" class="usa-nav-link"><span>Strategie</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/apps.html" class="usa-nav-link"><span>Apps</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/websites.html" class="usa-nav-link"><span>Websites</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/documenten.html" class="usa-nav-link"><span>Documenten</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/leren.html" class="usa-nav-link"><span>Leren</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/overons.html" class="usa-nav-link"><span>Over ons</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/contact.html" class="usa-nav-link"><span>Contact</span></a>
+        </li>
+      </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item">
+            <a href="overons.html">Over ons</a>
+          </li>
+        <li class="usa-nav__secondary-item">
+            <a href="contact.html" class="usa-current">Contact</a>
+        </li>
+      </ul>
+        <section aria-label="Search component">
+          <form class="usa-search usa-search--small" role="search">
+            <label class="usa-sr-only" for="search-field">Search</label>
+            <input
+              class="usa-input"
+              id="search-field"
+              type="search"
+              name="search"
+            />
+            <button class="usa-button" type="submit">
+              <img
+                src="/assets/uswds/img/usa-icons-bg/search--white.svg"
+                class="usa-search__submit-icon"
+                alt="Search"
+              />
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </nav>
 
-    </main><footer class="usa-footer usa-footer--slim">
+
+</header><main id="main-content">
+          <section class="usa-hero" aria-label="Introduction">
+      <div class="grid-container">
+        <div class="usa-hero__callout">
+          <h1 class="usa-hero__heading">
+            <span class="usa-hero__heading--alt">Leer alles over</span>toegankelijkheid!
+          </h1>
+           <p>Welkom bij de Studiegids Accessibility, kortweg studiegids A11Y. Je vindt hier (uitgebreide) informatie over alle aspecten van digitale toegankelijkheid.</p>
+        </div>
+      </div>
+    </section>
+
+<section id="test-section-id" class="usa-section">
+      <div class="grid-container usa-intro">
+        <h2 class="font-heading-xl margin-y-0">In beta</h2>
+        <p>
+        Dit project is nog in beta. Informatie wordt nog toegevoegd of verfijnd en de structuur staat nog niet 100% vast. Naarmate het project vordert, wordt de informatie steeds completer en wordt er gelinkt naar steeds meer bronnen.</p>
+        <h3>Je kan meehelpen!</h3>
+		<p>Help mee door het toevoegen van bronnen en informatie, video's, etc. door een pull request te doen op het GitHub project. Bij bugs kun je een issue openen.</p>
+		<ul>
+        	<li>Inhoudsopgave toevoegen waar nodig</li>
+        	<li>Consistente structuur verzinnen voor pagina's. Bouwen we op zoals bijvoorbeeld de <a href="/website/toetsenbord.html">pagina over toetsenbordtoegankelijkheid</a>, of liever zoals de <a href="/website/koppen.html">pagina over koppen</a>?</li>
+        	<li>CSS stijlen toevoegen voor opmerkingen, blok met credits en de "terug naar boven"-link.</li>
+        	<li>Illustraties toevoegen</li>
+        	<li>Toevoegen bronnen voor de diverse thema's bij Websites, in een later stadium informatie uitschrijven.</li>
+        	<li>Meer bronnen toevoegen over het toegankelijk maken van apps.</li>
+        	<li>Informatie uitschrijven over het toegankelijk maken van documenten.</li>
+    	</ul>
+        <a class="usa-button usa-button--big" href="/werk.html">Help mee op GitHub!</a>
+      </div>
+    </section>
+
+    </main><footer class="usa-footer">
   <div class="grid-container usa-footer__return-to-top">
     <a href="#">Return to top</a>
   </div>
   <div class="usa-footer__primary-section">
-    <div class="usa-footer__primary-container grid-row">
-      <div class="mobile-lg:grid-col-8">
-        <nav class="usa-footer__nav" aria-label="Footer navigation,">
-          <ul class="grid-row grid-gap">
-            <li
-              class="
-                mobile-lg:grid-col-6
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a class="usa-footer__primary-link" href="javascript:void(0);"
-                >&lt;Primary link&gt;</a
-              >
-            </li>
-            <li
-              class="
-                mobile-lg:grid-col-6
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a class="usa-footer__primary-link" href="javascript:void(0);"
-                >&lt;Primary link&gt;</a
-              >
-            </li>
-            <li
-              class="
-                mobile-lg:grid-col-6
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a class="usa-footer__primary-link" href="javascript:void(0);"
-                >&lt;Primary link&gt;</a
-              >
-            </li>
-            <li
-              class="
-                mobile-lg:grid-col-6
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a class="usa-footer__primary-link" href="javascript:void(0);"
-                >&lt;Primary link&gt;</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="mobile-lg:grid-col-4">
-        <address class="usa-footer__address">
-          <div class="grid-row grid-gap">
-            <div
-              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
-            >
-              <div class="usa-footer__contact-info">
-                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
-              </div>
-            </div>
-            <div
-              class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto"
-            >
-              <div class="usa-footer__contact-info">
-                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
-              </div>
-            </div>
-          </div>
-        </address>
-      </div>
-    </div>
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="/toegankelijkheid.html">Toegankelijkheid</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+         <a class="usa-footer__primary-link" href="/overons.html">Over ons</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="/contact.html">Contact</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content"></li>
+      </ul>
+    </nav>
   </div>
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
-      <div class="usa-footer__logo grid-row grid-gap-2">
-        <div class="grid-col-auto">
-          <img class="usa-footer__logo-img" src="assets/img/logo-img.png" alt="" />
+      <div class="grid-row grid-gap">
+        <div
+          class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2"
+        >
+          <div class="mobile-lg:grid-col-auto">
+            <img class="usa-footer__logo-img" src="/assets/uswds/img/logo-img.png" alt="" />
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p class="usa-footer__logo-heading">Studiegids Accessibility</p>
+          </div>
         </div>
-        <div class="grid-col-auto">
-          <p class="usa-footer__logo-heading">&lt;Agency Contact Center&gt;</p>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <div class="usa-footer__social-links grid-row grid-gap-1">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://github.com/sophieschoice">
+                <img class="usa-social-link__icon" src="/assets/img/logo_github.png" alt=""/>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </div>
+          </div>
+          <p class="usa-footer__contact-heading">
+           Neem contact op:
+          </p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:sophie@sophieschoice.net">sophie@sophieschoice.net</a>
+              </div>
+            </div>
+          </address>
         </div>
       </div>
     </div>
   </div>
-</footer><script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//statistics.sophieschoice.net/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
+</footer><script src="/assets/uswds/js/uswds.min.js"></script>
   </body>
 </html>
